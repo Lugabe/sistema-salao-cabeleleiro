@@ -1,11 +1,66 @@
 .container {
-    background-color: cornflowerblue;
+    background-color: rgb(202, 183, 12);
 }
 
 body {
-    background-color: darkcyan;
+    background-color: rgb(92, 6, 39);
 }
 
 .tabela {
     margin-top: 20px;
+}
+
+#div-img {
+    display: flex;
+    align-items: center;
+    flex-direction: row
+    ;
+
+}
+
+#home {
+    width: 700px;
+   display: inline-block;
+   margin: 0 auto 0 auto;
+}
+
+#p-home{
+    color: crimson;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+#h5-home{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#h3-home{
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#h4-constrole{
+text-align: center;
+font-size: 30px;
+font-weight: bolder;
+}
+
+#h3-titulo-controle{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#p-controle{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+span{
+    color: crimson;
 }
