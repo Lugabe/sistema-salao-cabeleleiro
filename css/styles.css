@@ -64,3 +64,12 @@ font-weight: bolder;
 span{
     color: crimson;
 }
+#div-img-controle{
+    display: flex;
+
+}
+
+#img-controle{
+    width: 600px;
+    margin: 0 auto 0 auto;
+}

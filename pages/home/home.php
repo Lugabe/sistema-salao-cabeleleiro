@@ -18,5 +18,5 @@
 <p id="p-home">O nosso site está em construção, mas logo logo o nosso site vai ficar uma belezura igual os seus cabelos!</p>
 <h5 id="h5-home">Enquanto isso, venha visitar o nosso salão de beleza e conheça o melhor salão da região!</h5>
 <div id="div-img">
-    <img id="home" src="./../../assets/logo-leila.jpg" alt="">
+    <img id="home" src="./../../assets/logo-leila.jpg" alt="logo-cabeleleiro">
 </div>
