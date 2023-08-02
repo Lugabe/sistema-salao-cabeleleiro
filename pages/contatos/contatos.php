@@ -6,9 +6,11 @@
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="post">
-        <input type="text" name="buscarNome" placeholder="Buscar contato..">
+        <div class="input-group ">
+            <input class="form-control bg-secondary text-white" type="text" name="buscarNome" placeholder="Buscar contato..">
+            <button class="btn btn-success btn mb-2 " type="submit" value="Pesquisar Nome"><i class='bi bi-search'></i> Pesquisar</button>
+        </div>
 
-        <input class="btn btn-success btn-sm mb-2 " type="submit" value= "Pesquisar Nome"><i class='bi bi-search'></i>
     </form>
 </div>
 <table class="table table-dark table-hover table-bordered table-sm">
@@ -82,8 +84,9 @@
     ?>
 
 
-        <li class="page-item"> <a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina - 1 ?>"> << </a>"</li>;
-        <?php
+        <li class="page-item"> <a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina - 1 ?>">
+                << </a>"</li>;
+    <?php
     }
     //Criando as setinhas para pular de pagina
 
@@ -98,11 +101,11 @@
         }
     }
     if ($pagina < ($totalPagina - 5)) {
-        ?>
+    ?>
 
-            <li class="page-item"><a  class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina + 1 ?>"> >> </a></li>";
-        <?php
+        <li class="page-item"><a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina + 1 ?>"> >> </a></li>";
+    <?php
     }
     echo "<li class='page-item'><a class= 'page-link' href=\"?menuop=contatos&pagina=$totalPagina\"> Ultima Página</a> </li>";
-        ?>
+    ?>
 </ul>

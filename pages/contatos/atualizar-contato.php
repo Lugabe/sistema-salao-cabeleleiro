@@ -10,7 +10,7 @@ $emailContato = mysqli_real_escape_string($conexao, $_POST["emailContato"]);
 $telefoneContato = mysqli_real_escape_string($conexao, $_POST["telefoneContato"]);
 $dataAgendamento = $_POST["dataAgendamento"];
 $horarioAgendamento = $_POST["horarioAgendamento"];
-$servico = mysqli_real_escape_string($conexao, $_POST["servico"]);
+$servico = $_POST["servico"];
 $valorServico = $_POST["valorServico"];
 
 $sql = "UPDATE tbcontatos SET

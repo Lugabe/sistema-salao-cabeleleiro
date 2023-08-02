@@ -1,10 +1,12 @@
 <header>
-    <h3>Agendamentos</h3>
+    <h3><i class="bi bi-journal-check mb-2"></i> Agendamentos</h3>
 </header>
 <div>
     <form action="index.php?menuop=agendamentos" method="post">
-        <input type="text" name="buscarNome" placeholder="Buscar contato..">
-        <input class="btn btn-success btn-sm mb-2" type="submit" value="Pesquisar Nome"><i class='bi bi-search'></i>
+        <div class="input-group">
+            <input class="form-control bg-secondary text-white" type="text" name="buscarNome" placeholder="Buscar contato..">
+            <button class="btn btn-success btn mb-2" type="submit"><i class='bi bi-search'></i> Pesquisar</button>
+        </div>
     </form>
 </div>
 <div class="tabela">
@@ -79,26 +81,28 @@ echo '<li class="page-item"><a class= "page-link" href="?menuop=agendamentos&pag
 if ($pagina > 6) {
 ?>
 
-    <li class="page-item"><a class="page-link" href="?menuop=agendamentos&pagina=<?php echo $pagina - 1 ?>"> << </a></li>";
-        <?php
-    }
-    //Criando as setinhas para pular de pagina
+    <li class="page-item"><a class="page-link" href="?menuop=agendamentos&pagina=<?php echo $pagina - 1 ?>">
+            << </a>
+    </li>";
+<?php
+}
+//Criando as setinhas para pular de pagina
 
-    for ($i = 1; $i <= $totalPagina; $i++) {
+for ($i = 1; $i <= $totalPagina; $i++) {
 
-        if ($i >= ($pagina - 5) && $i <= ($pagina + 5)) {
-            if ($i == $pagina) {
-                echo $i;
-            } else {
-                echo "<li class='page-item'><a class='page-link' href=\"?menuop=agendamentos&pagina=$i\"> $i </a></li> ";
-            }
+    if ($i >= ($pagina - 5) && $i <= ($pagina + 5)) {
+        if ($i == $pagina) {
+            echo $i;
+        } else {
+            echo "<li class='page-item'><a class='page-link' href=\"?menuop=agendamentos&pagina=$i\"> $i </a></li> ";
         }
     }
-    if ($pagina < ($totalPagina - 5)) {
-        ?>
+}
+if ($pagina < ($totalPagina - 5)) {
+?>
 
-            <li class="page-item"><a class="page-link" href="?menuop=agendamentos&pagina=<?php echo $pagina + 1 ?>"> >> </a></li>";
-        <?php
-    }
-    echo "<li class='page-item'><a class= 'page-link' href=\"?menuop=agendamentos&pagina=$totalPagina\"> Ultima Página</a> </li>";
-        ?>
+    <li class="page-item"><a class="page-link" href="?menuop=agendamentos&pagina=<?php echo $pagina + 1 ?>"> >> </a></li>";
+<?php
+}
+echo "<li class='page-item'><a class= 'page-link' href=\"?menuop=agendamentos&pagina=$totalPagina\"> Ultima Página</a> </li>";
+?>
